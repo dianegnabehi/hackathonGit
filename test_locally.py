@@ -1,6 +1,10 @@
 import os
 import json
+from dotenv import load_dotenv
 from review_pr import analyze_with_blackbox, post_comment, get_pr_diff
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Mock environment variables for local testing
 os.environ['GITHUB_TOKEN'] = 'mock_token'  # Replace with real token if testing GitHub API
@@ -48,7 +52,7 @@ This is a minor improvement. Approved with suggestions.
 # BLACKBOX_API_KEY
 print("Testing mock analysis...")
 try:
-    analysis = mock_analyze_with_blackbox(mock_diff, mock_title, mock_body, os.getenv('BLACKBOX_APIgit'), os.getenv('BLACKBOX_API_URL'))
+    analysis = mock_analyze_with_blackbox(mock_diff, mock_title, mock_body, os.getenv('BLACKBOX_API_KEY'), os.getenv('BLACKBOX_API_URL'))
     print("Mock Analysis Result:")
     print(analysis)
     print("\nTest passed: Analysis generated successfully.")

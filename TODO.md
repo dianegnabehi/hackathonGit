@@ -1,8 +1,3 @@
-# PR Review Bot TODO
-
-- [x] Create project directory "pr-review-bot"
-- [x] Create GitHub Actions workflow (.github/workflows/pr-review.yml)
-- [x] Create Python script (review_pr.py) for PR analysis and commenting
-- [x] Create README.md with setup instructions and demo
-- [x] Test the script locally with mock data
-- [x] Deploy to a test repository and verify PR review functionality (Instructions provided in README.md)
+- [x] Edit test_locally.py: Add dotenv import and load_dotenv(), fix typo 'BLACKBOX_APIgit' to 'BLACKBOX_API_KEY'
+- [x] Run python test_locally.py to verify local tests pass
+- [ ] Commit and push the modifications to the repository
