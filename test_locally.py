@@ -45,10 +45,10 @@ def mock_analyze_with_blackbox(diff, title, body, api_key, api_url):
 This is a minor improvement. Approved with suggestions.
 """
 
-# Test analysis
+# BLACKBOX_API_KEY
 print("Testing mock analysis...")
 try:
-    analysis = mock_analyze_with_blackbox(mock_diff, mock_title, mock_body, os.getenv('BLACKBOX_API_KEY'), os.getenv('BLACKBOX_API_URL'))
+    analysis = mock_analyze_with_blackbox(mock_diff, mock_title, mock_body, os.getenv('BLACKBOX_APIgit'), os.getenv('BLACKBOX_API_URL'))
     print("Mock Analysis Result:")
     print(analysis)
     print("\nTest passed: Analysis generated successfully.")
